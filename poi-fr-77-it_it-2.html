@@ -1,0 +1,576 @@
+<!-- odg2html/sequence.html -->
+<!DOCTYPE HTML>
+<!-- plugins/odg2html/inclure/render_head.html -->
+<html class="page_sequence ltr fr no-js" lang="fr" dir="ltr">
+<head>
+    <script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>O-DGuide</title>
+    <link rel="icon" type="image/x-icon" href="/plugins/auto/spipr_dist/v2.2.9/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/plugins/auto/spipr_dist/v2.2.9/favicon.ico" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <link rel="stylesheet" href="/local/cache-scss/bootstrap-cssify-1a343f7.css?1666617189" type="text/css" />
+    
+    <!-- insert_head_css -->
+    <script type='text/javascript'>var var_zajax_content='content';</script><script type="text/javascript">/* <![CDATA[ */
+var box_settings = {tt_img:true,sel_g:"#documents_portfolio a[type='image/jpeg'],#documents_portfolio a[type='image/png'],#documents_portfolio a[type='image/gif']",sel_c:".mediabox",trans:"elastic",speed:"200",ssSpeed:"2500",maxW:"90%",maxH:"90%",minW:"400px",minH:"",opa:"0.9",str_ssStart:"Diaporama",str_ssStop:"Arrêter",str_cur:"{current}/{total}",str_prev:"Précédent",str_next:"Suivant",str_close:"Fermer",splash_url:""};
+var box_settings_splash_width = "600px";
+var box_settings_splash_height = "90%";
+var box_settings_iframe = true;
+/* ]]> */</script>
+<!-- insert_head_css --><link rel='stylesheet' href='local/cache-css/ea7dbe358b0f5a1470d8fd2fcd9eff50.css?1666620483' type='text/css' />
+
+
+
+
+
+
+
+
+
+
+
+    
+    <style type="text/css">
+      .nav-sticky {
+          position: sticky;
+          top:0;
+      }
+    </style>
+    <link rel="stylesheet" href="/plugins/odg2html/css/render.scss?1653658773" type="text/css" />
+    
+    <!-- insert_head -->
+    
+<script type='text/javascript' src='local/cache-js/873730be1c1480a73d976a96d1eed677.js?1666620484'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- insert_head -->
+	
+	
+<script>htactif=1;document.createElement('picture'); var image_responsive_retina_hq = 0;</script><script>image_responsive_retina_hq = 1;</script>
+
+
+
+
+		
+    
+    <!-- Render avec Bootstrap -->
+    <script type="text/javascript" src="/plugins/auto/bootstrap4/v4.6.1.1/bootstrap/js/bootstrap-util.js"></script>
+    <script type="text/javascript" src="/plugins/auto/bootstrap4/v4.6.1.1/bootstrap/js/bootstrap-button.js"></script>
+    <script type="text/javascript" src="/plugins/auto/bootstrap4/v4.6.1.1/bootstrap/js/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="/plugins/auto/bootstrap4/v4.6.1.1/bootstrap/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="/plugins/auto/bootstrap4/v4.6.1.1/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" src="/plugins/auto/bootstrap4/v4.6.1.1/bootstrap/js/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="/plugins/auto/bootstrap4/v4.6.1.1/bootstrap/js/bootstrap-toast.js"></script>
+    <script type="text/javascript" src="/plugins/auto/bootstrap4/v4.6.1.1/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="/plugins/auto/bootstrap4/v4.6.1.1/bootstrap/js/bootstrap-popover.js"></script>
+    
+<!-- Plugin Métas + -->
+<!-- Dublin Core -->
+<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
+<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/" />
+<meta name="DC.Format" content="text/html" />
+<meta name="DC.Type" content="Text" />
+<meta name="DC.Language" scheme="rfc1766" content="fr" />
+
+
+<meta name="DC.Date" scheme="DCTERMS.W3CDTF" content="2022-10-25" />
+
+<meta name="DC.Identifier" scheme="URI" content="https://odgproto.dnc.global/spip.php?page=sequence" />
+<meta name="DC.Publisher" content="O-DGuide" />
+<meta name="DC.Source" scheme="URI" content="https://odgproto.dnc.global" />
+
+<meta name="DC.Creator" content="O-DGuide" />
+
+
+
+
+
+<!-- Open Graph -->
+
+<meta property="og:site_name" content="O-DGuide" />
+<meta property="og:type" content="website" />
+
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://odgproto.dnc.global/spip.php?page=sequence" />
+
+
+
+
+
+
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+
+
+<meta name="twitter:dnt" content="on" />
+<meta name="twitter:url" content="https://odgproto.dnc.global/spip.php?page=sequence" />
+</head><body class="page ">
+    <div class="container-fluid page ENV{type-page}">
+        <div id="content">
+            <script>
+            //[002y] Créer une référence globale à l'audio
+                var audiocontrol;
+                $(document).ready(function(){ 
+                    // Un élément audio HTML5 est-il présent ?
+                    try {
+                        audiocontrol = document.getElementById("audiocontrol");
+                        if ( audiocontrol !== null) console.log('HTML5 audiocontrol element found');
+                    } catch(e){};   
+                    if ( audiocontrol === null ) {
+                        // Créer un objet audiocontrol        
+                        try {
+                            audiocontrol = document.createElement('audio');
+                            if ( audiocontrol !== null) console.log('audiocontrol object created');    
+                        } catch(e) {
+                            console.log('Error creating audiocontrol object :' + e.message);    
+                        }      
+                    }
+                    if ( typeof audiocontrol !== 'object') {
+                        console.log('Fatal Error : No audiocontrol');
+                    }  
+                });     
+            </script>
+            
+            
+                
+                    
+                    
+                        <!-- odg2html/inclure/render_sequence.html -->
+
+
+
+
+    
+    
+        
+
+    <div class="row render"> 
+
+
+            <script>                                                    
+            //[002aa] Configurer les variables nécessaires pour gérer l'enchainement par sequence.js .
+                var auto = "non";
+            </script>
+
+            <div class="col main">
+
+                
+                
+                                                           
+                        
+                  
+
+                
+                <style>
+                    .header-dark{background-size:cover;padding-bottom:0;background-color:rgba(0,0,0,.8)}
+.header-dark .navbar{background:transparent;color:#fff;border-radius:0;box-shadow:none;border:none}
+.navbar-dark{background-color:#4C74D1}
+@media (min-width:768px){.header-dark .navbar{padding-top:.75rem;padding-bottom:.75rem}}
+.header-dark .navbar .navbar-brand{font-weight:700;color:inherit}
+.header-dark .navbar .navbar-brand:hover{color:#f0f0f0}
+.header-dark .navbar .navbar-collapse span{margin-top:5px}
+.header-dark .navbar .navbar-collapse span .login{color:#d9d9d9;margin-right:.5rem;text-decoration:none}
+.header-dark .navbar .navbar-collapse span .login:hover{color:#fff}
+.header-dark .navbar .navbar-toggler{border-color:#747474}
+.header-dark .navbar .navbar-toggler:hover,.header-dark .navbar-toggler:focus{background:none}
+.header-dark .navbar .navbar-toggler{color:#eee}
+.header-dark .navbar .navbar-collapse,.header-dark .navbar form{border-color:#636363}
+@media (min-width:992px){.header-dark .navbar.navbar .navbar-nav .nav-link{padding-left:1.2rem;padding-right:1.2rem}}
+.header-dark .navbar.navbar-dark .navbar-nav .nav-link{color:#d9d9d9}
+.header-dark .navbar.navbar-dark .navbar-nav .nav-link:focus,.header-dark .navbar.navbar-dark .navbar-nav .nav-link:hover,.contenu-nav .navbar.navbar-dark .navbar-nav .nav-link:hover{color:#fcfeff!important;background-color:transparent}
+.header-dark .navbar .navbar-nav > li > .dropdown-menu,.contenu-nav .navbar .navbar-nav > li > .dropdown-menu{margin-top:-5px;box-shadow:0 4px 8px rgba(0,0,0,.1);background-color:#fff;border-radius:2px}
+.header-dark .navbar .dropdown-menu .dropdown-item:focus,.header-dark .navbar .dropdown-menu .dropdown-item{line-height:2;font-size:14px;color:#37434d}
+.header-dark .navbar .dropdown-menu .dropdown-item:focus,.header-dark .navbar .dropdown-menu .drodown-item:hover{background:#ebeff1}
+.header-dark .navbar .action-button,.header-dark .navbar .action-button:active{border-radius:20px;font-size:inherit;color:#fff;box-shadow:none;border:none;text-shadow:none;padding:.5rem .8rem;transition:background-color 0.25s}
+.header-dark .navbar .action-button:hover{background:#269d9d}
+.header-dark .navbar label{color:#ccc}
+.header-dark .navbar form .search-field{display:inline-block;width:80%;background:none;border:none;border-bottom:1px solid transparent;border-radius:0;color:#ccc;box-shadow:none;color:inherit;transition:border-bottom-color 0.3s}
+.header-dark .navbar form .search-field:focus{border-bottom:1px solid #ccc}
+.header-dark .hero{margin-top:20px}
+@media (min-width:768px){.header-dark .hero{margin-top:20px}}
+.header-dark .hero h1{color:#fff;font-family:'Bitter',serif;font-size:40px;margin-top:20px;margin-bottom:80px}
+@media (min-width:768px){.header-dark .hero h1{margin-bottom:50px;line-height:1.5}}
+.header-dark .hero .ratio iframe{background-size:contain;background-repeat:no-repeat;background-position:center}
+.highlight-clean{color:#313437;background-color:#fff;padding:20px 0;margin-top:10px}
+.highlight-clean p{color:#7d8285}
+.highlight-clean h2{font-weight:700;margin-bottom:25px;line-height:1.5;padding-top:0;margin-top:0;color:#0c503d}
+.highlight-clean .intro{font-size:16px;max-width:500px;margin:0 auto 25px}
+.highlight-clean .buttons{text-align:center}
+.highlight-clean .buttons .btn{padding:16px 32px;margin:6px;border:none;background:none;box-shadow:none;text-shadow:none;opacity:0.9;text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:0.4px;line-height:1;outline:none;background-color:#ddd}
+.highlight-clean .buttons .btn:hover{opacity:1}
+.highlight-clean .buttons .btn:active{transform:translateY(1px)}
+.highlight-clean .buttons .btn-primary{background-color:#0c503d;color:#fff}
+.slider{border:1px solid #0c503d;border-radius:5px;margin-bottom:0.2rem}
+.navbar-brand{padding-left:10px}
+.navigation-liste{position:relative;z-index:1000}
+.liste-seq{background-color:rgba(0,0,0,0)}
+.liste-seq h1{color:#0c503d!important;padding-top:10px}
+.navigation-liste a{color:#FFF!important}
+.choix-lg-titre{color:#0c503d;padding-top:10px}
+.mentions{font-size:small;color:#413d3d}            
+                    body{background: #fff!important;}
+.row.titre{background-color:transparent;}
+.row.titre .col.text-center{
+background-color:rgba(239,239,239,0.8);
+padding-right:7px;
+padding-left:7px;
+color:#413d3d;
+border-radius:3px;}
+.row.mediacontrol .col.text-center{
+position:fixed;
+bottom:1.5em;}
+#audiocontrol{
+background-color:rgb(234,82,56);
+border-radius:3px;}
+.navbar-brand{margin-left:0.5em;}
+#nav{background:#ee715c!important;}
+#nav li{background-color:transparent;}
+.liste-seq h1, .liste-lg h1{color:#ea5339;}
+.liste-seq h4, .liste-lg h4{color:#413d3d;}
+.liste-seq li, .liste-lg li{margin-bottom:0.5em!important;
+color:#ea5339!important;}
+.liste-seq ul li a, .liste-lg ul li a{color:#413d3d!important;}
+                    .navbar.navbar-dark{background-color:#ee715c!important;}
+.header-dark{background-color:#fff;}
+#play-btn, .progress {background-color:#ee715c;}
+.intro h2{color:#413d3d;}            
+                </style>
+
+                
+                
+                <!-- odg2html/render/standard-video-multi/main.html -->
+
+<div class="header-dark">
+
+    
+      
+                                             
+            
+      
+
+    
+
+    
+    <!-- odg2html/inclure/render_navbar.html -->
+<nav class="navbar navbar-light navbar-expand-lg navigation-clean fixed-top " style="z-index:100;">
+    <div id="menuBasic" class="container">
+     
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-thin fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="navbar-nav">
+                
+                <li class="nav-item"><a class="nav-link" href="/poi-en-77.html">Language</a></li>
+                <li class="nav-item"><a class="nav-link" href="/poi-en.html">New Visit</a></li>
+                <li class="nav-item"><a class="nav-link" href="/poi-en-77-it_it-1.html">Restart from the begining</a></li>
+                <li class="nav-item"><a class="nav-link" href="/poi-en-77-it_it.html">List of sequences</a></li>
+                <li class="nav-item vitesselecture"><a class="nav-link" href="/poi-en-77-it_it-.html">Reading speed</a></li>  
+                <li class="nav-item"><a class="nav-link" href="aid-en.html">Help</a></li>
+            </ul>
+        </div>
+    </div>  
+</nav> 
+
+    
+    <div class="container hero" style="background-color: rgba(0,0,0,0);">
+        <div class="row">
+            <div class="col-md-8 offset-md-2"> 
+                <div class="ratio ratio-16x9">   
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video controls width="250">
+                            <source src="https://odgproto.dnc.global/IMG/mp4/video_1.mp4.mp4">
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                    </div>   
+                </div>
+                <div class="html mentions">
+                    &copy; Terres de France <a href="https://www.t2fr.fr/">www.t2fr.fr</a> - Wéo <a href="https://www.weo.fr/">www.weo.fr</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<section class="highlight-clean">
+    
+    <div  class="container" style="position: relative;">
+        <div class="intro" >
+            <h2 class="text-center">Prima passeggiata (video)</h2>
+        </div>
+        
+        <span class="current-time">00:00</span>
+        <span class="song-duration" style="right: 15px;position: absolute;">00:00</span>
+        
+        <div class="slider" id="duration-container">
+            
+            <div class="progress" id="duration" >
+
+            </div>
+        </div>
+        <div class="buttons">
+              
+                <button id="btn_Prev" class="btn btn-light" type="button" data-action="poi-fr-77-it_it-1.html">Previous</button>
+            
+            <a class="btn btn-primary" id="play-btn" data-statut="pause" >Play </a>
+             
+                <button id="btn_Next" class="btn btn-light" type="button" data-action="poi-fr-77-it_it-3.html">Next</button>
+            
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container" style="background-color:rgba(0,0,0,0);">
+        <div class="progress" style="width: 35%;height: 8px;margin: 50px auto;margin-top: 10px; "></div>
+
+        <div class="row"> 
+            <div class="col-md-8 offset-md-2" >
+                <h2 class="text-center"><voice language="it-IT" gender="female">
+<prosody pitch="-1st">
+Avete sempre sognato di vivere la vita di un castello? Ebbene, qui è possibile grazie a Ségolaine e Charles, che vi faranno sentire come a casa vostra nel castello. Perché qui l'ospitalità e la condivisione non sono parole vuote.
+</prosody> 
+È così pacifico che non si può immaginare che un tempo qui ci fossero così tante lotte e rivalità. 
+</voice>
+
+<voice language="it-IT" gender="male">
+Per fortuna per noi è finita. Ma è vero che questa casa... beh, quella che io chiamo casa, in realtà è il castello di Les Riceys Bas. Dico "casa" perché è la nostra casa di famiglia, era prima di tutto una grande fortezza, la cui funzione era essenzialmente quella di proteggere gli abitanti del villaggio. E questo castello ha subito alcune modifiche belliche. Ci sono testimonianze orribili di bande armate che passano e distruggono completamente il volto di Les Riceys.
+</voice>  
+
+<voice language="it-IT" gender="female">
+E allora, chi era in lotta tra chi?
+</voice>  
+
+<voice language="it-IT" gender="male">
+Contro tutti, in realtà. Ma il periodo più fiammeggiante dal punto di vista bellico fu la Guerra dei Cento Anni, poiché questo castello faceva parte del Ducato di Borgogna, con il cancelliere Rolin come proprietario all'epoca. Il famoso cancelliere che fondò gli Ospizi di Beaune nel 1441, acquistò questa casa nel 1425. Aveva rafforzato le difese, perché si trovava al confine con la Champagne. Gli Champenois erano dalla parte dei re di Francia, i Burgundi da quella degli inglesi.
+ 
+Non dobbiamo dimenticare che furono i borgognoni a fare prigioniera Giovanna d'Arco e a consegnarla, o trasferirla, o venderla agli inglesi perché fosse bruciata a Rouen. È stato quindi un periodo molto, molto turbolento. L'ultima modifica importante di questa casa risale al XVIII secolo, con la parte centrale che vedete con le grandi finestre. 
+</voice>
+
+<voice language="it-IT" gender="female">
+E come è entrato in famiglia questo castello?
+</voice> 
+
+<voice language="it-IT" gender="male">  
+Questo castello fu venduto da Michel de Pomereu nel 1802 al mio trisavolo, una famiglia chiamata Hoûets, che era in realtà un commerciante di vino molto ricco, dato che il villaggio di Les Riceys era un villaggio di produttori di vino fin dall'XI secolo. Così, l'attività di questa casa oggi è duplice: da un lato, un'attività turistica di animazione culturale. D'altra parte, si tratta di un'azienda vitivinicola in cui stiamo iniziando a produrre il nostro champagne.
+</voice>  
+
+<voice language="it-IT" gender="female">
+Un villaggio vinicolo che conosciamo in particolare per il rosé di Les Riceys che abbiamo assaggiato in una puntata precedente. Les Riceys è il comune più meridionale della denominazione Champagne, subito dopo la Borgogna.
+</voice> </h2>         
+            </div>  
+        </div>
+    </div>    
+</section>
+
+<script>
+    const audiofile = "IMG/mp3/seq837.mp3";
+    const id_sequence = "837";    //[002aw]
+    const principale = Boolean(); 
+</script>
+                <script>
+$(document).ready(function(){
+const songDuration=$(".song-duration");
+const currentTime=$(".current-time");
+var speed=1;
+audiocontrol.setAttribute('autoplay',false);
+audiocontrol.setAttribute('preload','auto');
+audiocontrol.setAttribute('src',audiofile);
+audiocontrol.addEventListener('loadedmetadata',function(){
+$("#duration").val(0);
+$("#duration").attr("max",audiocontrol.duration);
+songDuration.text(formatTime(audiocontrol.duration));
+},false);
+var video=document.querySelector('video');
+video.autoplay=false;
+video.preload='auto';
+video.controls=false;
+pause();
+if(principale){
+audiocontrol.volume=0;
+}else{
+video.volume=0;
+video.addEventListener('play',(event)=>{
+play();
+});
+video.addEventListener('pause',(event)=>{
+pause();
+});
+video.addEventListener('waiting',(event)=>{
+audiocontrol.pause();
+});
+video.addEventListener('playing',(event)=>{
+audiocontrol.play();
+statut_to_play();
+});
+}
+$('#play-btn').click(function(){
+if($("#play-btn").data("statut")=="pause"){
+play();
+}else{
+pause();
+}
+});
+function play(){
+video.play();
+if(!principale){
+adjustspeed();
+}
+statut_to_play();
+}
+function adjustspeed(){
+speed=audiocontrol.duration/video.duration;
+audiocontrol.playbackRate=speed;
+}
+function pause(){
+audiocontrol.pause();
+video.pause();
+statut_to_pause();
+}
+function statut_to_play(){
+$("#play-btn").html('Pause');
+$("#play-btn").data("statut","play");
+}
+function statut_to_pause(){
+$("#play-btn").html('Play');
+$("#play-btn").data("statut","pause");
+}
+video.addEventListener("timeupdate",function(){
+currentTime.text(formatTime(video.currentTime));
+$("#duration").css("width",video.currentTime/video.duration*100+'%');
+});
+$("#duration-container").click(function(event){
+var totalWidth=this.clientWidth;
+var progressWidth=event.offsetX;
+var current=(progressWidth/totalWidth)*video.duration;
+adjustspeed();
+audiocontrol.currentTime=current*speed;
+video.currentTime=current;
+play();
+});
+function formatTime(time){
+var min=Math.floor(time/60);
+if(min<10){
+min='0'+min;
+}
+var sec=Math.floor(time%60);
+if(sec<10){
+sec='0'+sec;
+}
+return min+':'+sec;
+}
+$(".drapeau").click(function(e){
+window.location=$(this)
+.data("url");
+});
+if(('SpeechRecognition'in window)||('webkitSpeechRecognition'in window)){
+var SpeechRecognition=SpeechRecognition||webkitSpeechRecognition;
+var recognition=new SpeechRecognition();
+var SpeechGrammarList=SpeechGrammarList||webkitSpeechGrammarList;
+var speechRecognitionList=new SpeechGrammarList();
+var commands=['pause','play','arrêter','stop','continuer','go','reprendre','démarrer','suivant','précédent','début','répéter'];
+var grammar='#JSGF V1.0; grammar commands; public <command> = '+commands.join(' | ')+' ;'
+recognition.grammars=speechRecognitionList;
+speechRecognitionList.addFromString(grammar,1);
+recognition.continuous=true
+recognition.interimResults=true;
+recognition.lang="fr-FR"
+recognition.onresult=function(event){
+var ok=false;
+for(i=event.resultIndex;i<event.results.length&&!ok;i++){
+var result=event.results[i][0].transcript;
+switch(result.trim()){
+case'pause':
+case'arrêter':
+case'stop':
+pause();
+ok=true;
+break;
+case'continuer':
+case'reprendre':
+case'démarrer':
+case'go':
+case'play':
+$("#play-btn")[0].click();
+ok=true;
+break;
+case'début':
+window.location.href='/?page=sequence&id_sequence=0';
+ok=true;
+break;
+case'suivant':
+$("#btn_Next")[0].click();
+ok=true;
+break;
+case'précédent':
+$("#btn_Prev")[0].click();
+ok=true;
+break;
+case'répéter':
+window.location.href='/?page=sequence&id_sequence='+id_sequence;
+ok=true;
+break;
+default:
+break;
+}
+}
+}
+recognition.start();
+}
+});
+</script> 
+
+            </div>
+
+
+
+    </div> 
+
+
+ 
+<script>  // PHP initialise quelques variables pour sequence.js
+    const STR_VITESSE_LECTURE = "Vitesse de lecture";
+</script>
+<script type='text/javascript' src="plugins/odg2html/js/sequence.js"></script>
+
+
+<div class="modal text-center" id="speeddialog" role="dialog" style="z-index:2000;">
+    <span id="btn_Moins" class="btn small speed speedmoins" title="Moins rapide">Moins rapide</span>&nbsp;
+    <span id="btn_Normal" class="btn small speed speednormal" title="Normale">Normale</span>&nbsp;
+    <span id="btn_Plus" class="btn small speed speedplus" title="Plus rapide">Plus rapide</span>
+    <p id="speedcontainer">
+        <br/>
+        Vitesse : <span id="displayspeed"></span>
+    </p> 
+</div>                    
+                
+            
+        </div>    
+    </div>
+</body>                                                                                                               
+</html>
