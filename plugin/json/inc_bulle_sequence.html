@@ -1,0 +1,23 @@
+[(#REM)
+Extrait du plugin geobase   
+Auteur : Bertrand Degoy DnC
+Copyright(c) 2013-2014 DnC
+
+Projet O-DGuide v2  
+002u2 - Adapté au template cartographie
+Auteur : Bertrand Degoy DnC
+Copyright (c) 2021-2022 i-Tego
+
+]<div style="width:100px;">
+<BOUCLE_sequence(SEQUENCES){id_sequence}>
+    [<a href="#URL_SITE_SPIP/poi-#LANG-#ID_AUDIOGUIDE-#AUDIOLANGUE-#RANG.html" style="text-decoration:none;"  title="#INFO_TITRE{sequence,#ENV{id_sequence}}">
+        (#INFO_TITRE{sequence,#ENV{id_sequence}})
+    </a><br/>]
+    <BOUCLE_fichier(DOCUMENTS){id_sequence=#ENV{id_sequence}}{par date}{inverse}{0,1}>
+        #SET{image,#CHEMIN{#FICHIER}}
+    </BOUCLE_fichier>
+    [<a href="#URL_SITE_SPIP/poi-#LANG-#ID_AUDIOGUIDE-#AUDIOLANGUE-#RANG.html" title="#INFO_TITRE{sequence,#ENV{id_sequence}}">    
+        (#GET{image}|image_reduire{110}|image_recadre{100,100,center})   
+    </a>]
+</BOUCLE_sequence>    
+</div> 

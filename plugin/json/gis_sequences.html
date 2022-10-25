@@ -1,0 +1,34 @@
+[(#REM)
+Extrait du plugin geobase   
+Auteur : Bertrand Degoy DnC
+Copyright(c) 2013-2014 DnC
+
+Projet O-DGuide v2 
+plugin odgk O-DGuide Cartographie  
+002u2 - Adaptation pour les templates cartographiques
+002u5 limiter les POI à l'audioguide si il est précisé.
+002u7 Multilinguisme : pour simplifier le travail, seules les séquences de la langue principale sont positionnées.
+Le langage est saisi de la session. la boucle secondaires détermine l'id de la séquence secondaire s'il y a lieu.
+
+Auteur : Bertrand Degoy DnC
+Copyright (c) 2021-2022 i-Tego (r)
+
+]<BOUCLE_seq(SEQUENCES) {gis} {id_audioguide?} {0, #ENV{limit}} {","}><BOUCLE_secondaires(SEQUENCES){id_trad=#_seq:ID_SEQUENCE}{audiolangue=#SESSION{audiolangue}}> #SET{sequence, #_secondaires:ID_SEQUENCE}</BOUCLE_secondaires></B_secondaires>#SET{sequence,#_seq:ID_SEQUENCE}<//B_secondaires>{"type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [#LON, #LAT]},
+        "id":"#ID_GIS",
+        "properties": {
+            "title":[(#INCLURE{fond=json/inc_bulle_sequence, id_sequence=#GET{sequence}}|json_encode)]
+            [(#LOGO_GIS|oui)
+            [(#SET{logo_doc,#LOGO_GIS|image_passe_partout{32,32}|image_recadre{32,32}})]]
+            [(#LOGO_GIS|non)
+            [(#CHEMIN{images/marker_defaut.png}|oui)
+                [(#SET{logo_doc,#CHEMIN{images/marker_defaut.png}|image_passe_partout{32,32}|image_recadre{32,32}})]
+            ]]
+            [(#GET{logo_doc}|oui)
+            #SET{icon_w,#GET{logo_doc}|extraire_attribut{src}|largeur}
+            #SET{icon_h,#GET{logo_doc}|extraire_attribut{src}|hauteur}
+            [,"icon": (#GET{logo_doc}|extraire_attribut{src}|url_absolue|json_encode)],
+            "icon_size": \[[(#GET{icon_w})],[(#GET{icon_h})]\],
+            "icon_anchor": \[[(#GET{icon_w}|div{2})],[(#GET{icon_h})]\],
+            "popup_anchor": \[1,[-(#GET{icon_h}|div{1.2})]\]]
+        }}</BOUCLE_seq>        
