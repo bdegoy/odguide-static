@@ -53,15 +53,7 @@
     <script type='text/javascript' src='assets/js/image_responsive.js'></script>
 
     <!-- Render avec Bootstrap -->
-    <script type="text/javascript" src="assets/js/bootstrap-util.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-button.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-collapse.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-modal.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-scrollspy.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-tab.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-toast.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-tooltip.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 
 <!-- Plugin Métas + -->
 <!-- Dublin Core -->
@@ -206,18 +198,11 @@ color:#ea5339!important;}
                 
                 
                 <!-- odg2html/render/cartographie/main.html -->
-
+ 
+    </div>
 
     
-          
-                                                 
-            
-      
-
-    <div class="front-layer">
-
-        
-        <!-- odg2html/inclure/render_navbar.html -->
+    <!-- odg2html/inclure/render_navbar.html -->
 <nav class="navbar navbar-light navbar-expand-lg navigation-clean fixed-top " style="z-index:100;">
     <div id="menuBasic" class="container">
      
@@ -239,13 +224,13 @@ color:#ea5339!important;}
     </div>  
 </nav> 
 
-        
-        
-                
-           
-        <div class="row">
-            <div class="col backg" style="position:relative;">
-                <div id="map10" class="carte_gis" style="width:100%; height:400px;">
+    
+    
+    
+
+    <div class="row">
+        <div class="col backg" style="position:relative;">
+            <div id="map10" class="carte_gis" style="width:100%; height:400px;">
 </div>
 
 <script type="text/javascript">/*<![CDATA[*/
@@ -255,7 +240,7 @@ color:#ea5339!important;}
 
     // Charger le javascript de GIS une seule fois si plusieurs cartes
     if (typeof jQgisloader=="undefined"){
-        jQgisloader = jQuery.ajax({url: 'local/cache-js/jsdyn-javascript_gis_js-e1240eba.js?1666786916', dataType: 'script', cache: true});
+        jQgisloader = jQuery.ajax({url: 'local/cache-js/jsdyn-javascript_gis_js-e1240eba.js?1666791345', dataType: 'script', cache: true});
     }
     // et initialiser la carte (des que js GIS charge et des que DOM ready)
     jQgisloader.done(function(){
@@ -311,94 +296,96 @@ color:#ea5339!important;}
 
     /*]]>*/
 </script>
-                <div class="position:absolute;left:16px;bottom:30px;">
-                    <a id="btn-navexpl" class="leaflet-bar" data-navexpl="0" title="Mode exploration">Mode exploration</a>
-                </div>         
-            </div>
-
+            <div class="position:absolute;left:16px;bottom:30px;">
+                <a id="btn-navexpl" class="leaflet-bar" data-navexpl="0" title="Mode exploration">Mode exploration</a>
+            </div>         
         </div>
-
-        <!--
-        <div class="row">
-        <div class="col text-center backg">
-        <div id="infoposition">***</div>    
-        </div>
-        </div>
-        -->
-
-        <section class="highlight-clean">
-    <div class="container" style="position: relative;">
-        <div class="intro">
-            <h2 class="text-center">Orientation</h2>
-        </div>
-        <span class="current-time">00:00</span>
-        <span class="song-duration" style="right: 15px;position: absolute;">00:00</span>
-        <div class="slider" id="duration-container">
-            <div class="progress" id="duration" >
-
-            </div>
-        </div>
-        <div class="buttons">
-            
-            <a class="btn btn-primary" id="play-btn" data-statut="pause" >Play </a>
-             
-            <button id="btn_Next" class="btn btn-light" type="button" data-action="poi-fr-77-fr_fr-2.html">Suivant</button>
-            
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container" style="background-color:rgba(0,0,0,0);">
-        <div class="progress" style="width: 35%;height: 8px;margin: 50px auto;margin-top: 10px; "></div>
-
-        <div class="row"> 
-            <div class="col-md-8 offset-md-2">
-                <h2 class="text-center">Sélectionnez un point sur la carte</h2>         
-            </div>  
-        </div>
-    </div>    
-</section>
 
     </div>
 
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    <script>
-        const audiofile = "IMG/mp3/seq785.mp3";  //TODO: start : TBC
-        const FIT = false;  // l'image est responsive
+    <!--
+    <div class="row">
+    <div class="col text-center backg">
+    <div id="infoposition">***</div>    
+    </div>
+    </div>
+    -->
 
-        // pour cartographie/script.js 
-        const MODE_EXPLORATION = "Mode exploration";
-        const MODE_NAVIGATION = "Mode navigation"; 
-        const ERROR_NOT_SUPPORTED = "Votre navigateur ne supporte pas la géolocalisation. Vérifiez la configuration";
-        const ERROR_TIMEOUT ="Timeout";
-        const ERROR_BROWSER ="Votre navigateur ne supporte pas la géolocalisation. Vérifiez la configuration";
-        const ERROR_LOCALISATION ="Erreur lors de la géolocalisation";
-        const ERROR_PERMISSION_DENIED ="Vous n'avez pas donné la permission";
-        const ERROR_POSITION_UNAVAILABLE ="La position n'a pu être déterminée";
-        const ERROR_UNKNOWN ="Erreur inconnue";
-        const POS_ODG_LAT = "48.00523517718609";
-        const POS_ODG_LON = "4.370584487915038";
-        const POS_ODG_ZOOM = "17";
-        const POINTS = "[{ids:'858',nom:'Décors peints intérieurs ',lat:'48.004933689215314',lon:'4.369989037513733'},{ids:'864',nom:'Le pigeonnier  du château de Taisne',lat:'48.00428',lon:'4.37176'},{ids:'870',nom:'Les écuries du château de Taisne',lat:'48.00446',lon:'4.37046'},{ids:'882',nom:'Le parc et les jardins - suite-',lat:'48.00586',lon:'4.37088'},{ids:'791',nom:'Les Riceys en Champagne depuis l&#8217;an 719',lat:'48.00459630773009',lon:'4.370090961456298'},{ids:'797',nom:'Le château médiéval&nbsp;: de Robert 1er au chancelier Nicolas Rolin&nbsp;',lat:'48.00476858791318',lon:'4.370096325874329'},{ids:'803',nom:'Le XVIe siècle&nbsp;: de Marie d’Amboise à Urbain de Créquy',lat:'48.00496',lon:'4.37021'},{ids:'809',nom:'Le XVIIe siècle des Vignier ',lat:'48.00493',lon:'4.37033'},{ids:'815',nom:'La famille de Pomereu au XVIIIème siècle',lat:'48.00489',lon:'4.37047'},{ids:'822',nom:'La famille Hoüet ',lat:'48.00485',lon:'4.37064'},{ids:'828',nom:'Anna Levasseur de Biarre  et Charles de Taisne',lat:'48.00498',lon:'4.37072'},{ids:'834',nom:'Première promenade (video)',lat:'48.007410145332244',lon:'4.371625185012817'},{ids:'840',nom:'Angelo de Taisne, puis Charles et Ségolène de Taisne ',lat:'48.00502',lon:'4.37055'},{ids:'846',nom:'Le Cellier du XIIe',lat:'48.0051',lon:'4.37009'}]";  // Points d'intérêt. Ne sert qu'à la détection de proximité et la notification. Ne joue pas sur la sélection des séquences affichées.
-        const POI_NOTIFICATION_DIST = 20; // Rayon (m) de déclenchement de la notification à proximité d'un POI, pour zoom = 18
-        const MSG_NOTIFICATION_PROXIMITE = "O-DGuide : à proximité du point";
-        const MSG_NOTIFICATION_ECOUTER = "écouter la séquence"; 
-    </script>
+    <section class="highlight-clean">
+        <div class="container" style="position: relative;">
+            <div class="intro">
+                <h2 class="text-center"></h2>
+            </div>
+            <span class="current-time">00:00</span>
+            <span class="song-duration" style="right: 15px;position: absolute;">00:00</span>
+            <div class="slider" id="duration-container">
+                <div class="progress" id="duration" >
+
+                </div>
+            </div>
+            <div class="buttons">
+                
+                <a class="btn btn-primary" id="play-btn" data-statut="pause" >Play </a>
+                 
+                <button id="btn_Next" class="btn btn-light" type="button" data-action="poi-fr-77-fr_fr-1.html">Suivant</button>
+                
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container" style="background-color:rgba(0,0,0,0);">
+            <div class="progress" style="width: 35%;height: 8px;margin: 50px auto;margin-top: 10px; "></div>
+
+            <div class="row"> 
+                <div class="col-md-8 offset-md-2">
+                    <h2 class="text-center"></h2>         
+                </div>  
+            </div>
+        </div>    
+    </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const audiofile = "IMG/mp3/seq785.mp3";  //TODO: start : TBC
+    const FIT = false;  // l'image est responsive
+
+    // pour cartographie/script.js 
+    const MODE_EXPLORATION = "Mode exploration";
+    const MODE_NAVIGATION = "Mode navigation"; 
+    const ERROR_NOT_SUPPORTED = "Votre navigateur ne supporte pas la géolocalisation. Vérifiez la configuration";
+    const ERROR_TIMEOUT ="Timeout";
+    const ERROR_BROWSER ="Votre navigateur ne supporte pas la géolocalisation. Vérifiez la configuration";
+    const ERROR_LOCALISATION ="Erreur lors de la géolocalisation";
+    const ERROR_PERMISSION_DENIED ="Vous n'avez pas donné la permission";
+    const ERROR_POSITION_UNAVAILABLE ="La position n'a pu être déterminée";
+    const ERROR_UNKNOWN ="Erreur inconnue";
+    const POS_ODG_LAT = "48.00523517718609";
+    const POS_ODG_LON = "4.370584487915038";
+    const POS_ODG_ZOOM = "17";
+    const POINTS = "[{ids:'858',nom:'Décors peints intérieurs ',lat:'48.004933689215314',lon:'4.369989037513733'},{ids:'864',nom:'Le pigeonnier  du château de Taisne',lat:'48.00428',lon:'4.37176'},{ids:'870',nom:'Les écuries du château de Taisne',lat:'48.00446',lon:'4.37046'},{ids:'882',nom:'Le parc et les jardins - suite-',lat:'48.00586',lon:'4.37088'},{ids:'791',nom:'Les Riceys en Champagne depuis l&#8217;an 719',lat:'48.00459630773009',lon:'4.370090961456298'},{ids:'797',nom:'Le château médiéval&nbsp;: de Robert 1er au chancelier Nicolas Rolin&nbsp;',lat:'48.00476858791318',lon:'4.370096325874329'},{ids:'803',nom:'Le XVIe siècle&nbsp;: de Marie d’Amboise à Urbain de Créquy',lat:'48.00496',lon:'4.37021'},{ids:'809',nom:'Le XVIIe siècle des Vignier ',lat:'48.00493',lon:'4.37033'},{ids:'815',nom:'La famille de Pomereu au XVIIIème siècle',lat:'48.00489',lon:'4.37047'},{ids:'822',nom:'La famille Hoüet ',lat:'48.00485',lon:'4.37064'},{ids:'828',nom:'Anna Levasseur de Biarre  et Charles de Taisne',lat:'48.00498',lon:'4.37072'},{ids:'834',nom:'Première promenade (video)',lat:'48.007410145332244',lon:'4.371625185012817'},{ids:'840',nom:'Angelo de Taisne, puis Charles et Ségolène de Taisne ',lat:'48.00502',lon:'4.37055'},{ids:'846',nom:'Le Cellier du XIIe',lat:'48.0051',lon:'4.37009'}]";  // Points d'intérêt. Ne sert qu'à la détection de proximité et la notification. Ne joue pas sur la sélection des séquences affichées.
+    const POI_NOTIFICATION_DIST = 20; // Rayon (m) de déclenchement de la notification à proximité d'un POI, pour zoom = 18
+    const MSG_NOTIFICATION_PROXIMITE = "O-DGuide : à proximité du point";
+    const MSG_NOTIFICATION_ECOUTER = "écouter la séquence"; 
+</script>
+
+</BOUCLE_sequence>
                 <script>
 $(document).ready(function(){
 var idwatch;
