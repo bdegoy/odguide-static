@@ -1,0 +1,61 @@
+ /*** Render, odg2html (static) compilé avec https://www.cssportal.com/scss-to-css/ ***/
+
+/* pages sequence */
+ .page_sequence html, .page_sequence-liste html, .page_sequence body, .page_sequence-liste body {
+  height: 100%;
+}
+.page_sequence .render .main, .page_sequence-liste .render .main {
+  padding: 0;
+}
+.page_sequence .render .main .back-layer, .page_sequence-liste .render .main .back-layer {
+  position: relative;
+  top: 48px;
+  width: 100%;
+  z-index: 10;
+}
+.page_sequence .render .main .back-layer .row, .page_sequence-liste .render .main .back-layer .row {
+  margin-right: -30px !important;
+  margin-left: -30px !important;
+}
+.page_sequence .render .main .back-layer .backg, .page_sequence-liste .render .main .back-layer .backg {
+  padding: 0;
+}
+.page_sequence .render .main .back-layer .fit-image, .page_sequence-liste .render .main .back-layer .fit-image {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  min-height: 800px;
+  /* only if you want fixed height */
+}
+.page_sequence .render .main .html-layer, .page_sequence-liste .render .main .html-layer {
+  width: 100%;
+  z-index: 20;
+}
+.page_sequence .render .main .front-layer, .page_sequence-liste .render .main .front-layer {
+  position: fixed;
+  width: 100%;
+  top: 50px;
+  z-index: 30;
+  padding: 0.5rem;
+}
+.page_sequence .render .main .front-layer .speed, .page_sequence-liste .render .main .front-layer .speed {
+  float: right;
+  margin-top: 6px;
+}
+.page_sequence .render .main .titre, .page_sequence-liste .render .main .titre, .page_sequence .render .main .mediacontrol, .page_sequence-liste .render .main .mediacontrol {
+  margin-top: 1rem;
+}
+.page_sequence .render .main .btnPrev, .page_sequence-liste .render .main .btnPrev, .page_sequence .render .main .btnNext, .page_sequence-liste .render .main .btnNext {
+  cursor: pointer;
+}
+.page_sequence .render .main .bignumber, .page_sequence-liste .render .main .bignumber {
+  font-size: 6rem;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+  top: 16px;
+}
+.page_sequence .render .main .titre, .page_sequence-liste .render .main .titre {
+  font-size: 1.5rem;
+  padding: 1.2rem;
+}
