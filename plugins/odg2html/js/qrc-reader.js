@@ -4,19 +4,20 @@
 * 
 * Lecture d'un QR-Code et navigation vers la séquence.
 * 
-* [002s] 
-* [static] réintégrer les paramètres lang et audiolangue à l’URL scannée
+* [002s] [static1] Version pour site statique.
+* On utilise les QR-Codes standard de O-DGuide. 
+* Il faut donc faire abstraction de l'hôte de l’URL scannée et intégrer les paramètres lang et audiolangue dans la réponse. 
+* Voir : le document odg_html_2_applications.
 * 
 * Nécessite HTML5 QR Code.
 * Voir :  
 * https://github.com/mebjas/html5-qrcode
-* https://blog.minhazav.dev/HTML5-QR-Code-scanning-launched-v1.0.1/
+* https://blog.minhazav.dev/HTML5-QR-Code-scanning-launched-v1.0.1/     
 *
-* Minifié avec https://jscompress.com/
+* A minifier avec https://jscompress.com/
 * 
 * Auteur : B.Degoy
 * Tous droits réservés
-* Copyright (c) 2021 DnC
 * Copyright (c) 2022 i-Tego
 */ 
 
@@ -39,10 +40,13 @@ $(document).ready(function() {
 
             function onScanSuccess(qrMessage) {
                 var demande = window.location;
+                // [static1] générer une URL relative avec les paramètres
                 var lang = get_static_parameters(demande)[1];   
                 var audiolangue = get_static_parameters(demande)[2];
-                // La réponse est du type : https://<host>/<qHex>-<lang>-<audiolangue>.html
-                var reponse = qrMessage + '-' + lang + '-' + audiolangue + '.html';
+                // la réponse est un chemin relatif du type <dir>/<qHex>-<lang>-<audiolangue>.html
+                var dirqhex = parse_url(qrMessage)["path"];  // exemple : odguide-static/q884d...
+                var reponse = dirqhex + '-' + lang + '-' + audiolangue + '.html';
+                // redirection
                 $(location).attr('href',reponse);    
             }
 
@@ -74,22 +78,24 @@ $(document).ready(function() {
 
 });
 
-//[static] 
 
-/**
+/** [static][002s]
 * Extrait les paramètres de la demande au format HTML statique.
-* Exemple https://odguide.io/scn-<lang>-<audiolangue>.html
-* lang = get_static_parameters(url)[1];
-* audiolangue = get_static_parameters(url)[2];
+* Exemple :
+*   pour https://bdegoy.github.io/odguide-static/scn-<lang>-<audiolangue>.html
+*   lang = get_static_parameters(url)[1];
+*   audiolangue = get_static_parameters(url)[2];
 * @param url
-*/
+*/                                                                           
 function get_static_parameters(url) {
     var path = parse_url(url);
-    var thepath = path['path'].slice(0, -5);    // supprimer '.html'
-    var path_parts = thepath.split(('-'));  
+    if ( path.endsWith(".html") ) {
+        var path = path['path'].slice(0, -5);    // supprimer '.html'    
+    }
+    var file = path.split("/").pop();        //[static2] ne retenir que la fin du chemin
+    var path_parts = file.split(('-'));    
     return path_parts; 
 }
-
 
 /**
 * @see: https://blog.shevarezo.fr/post/2015/08/21/comment-parser-url-jquery-javascript 
